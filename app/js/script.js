@@ -37,22 +37,7 @@ const swiper = new Swiper('.swiper-container', {
    navigation: {
      nextEl: '.swiper-button-next',
      prevEl: '.swiper-button-prev',
-   },
-
-   breakpoints: {
-      
-      320: {
-        slidesPerView: 1,        
-      },
-      
-      480: {
-        slidesPerView: 1,        
-      },
-      
-      992: {
-        slidesPerView: 1,        
-      }
-   },
+   },   
 });   
 
 
@@ -127,16 +112,6 @@ button.addEventListener('click', function () {
    };         
 });
 
-// logo.addEventListener('click', function () {   
-
-//    // Компенсация скролла   
-//    removepadding();
-
-//    button.classList.remove('menu__btn--active');
-//    menu.classList.remove('menu__list--active');
-//    document.body.classList.remove('lock');
-// });
-
 links.forEach(function (link) {
    link.addEventListener('click', function () {
            
@@ -148,59 +123,3 @@ links.forEach(function (link) {
       removepadding(); 
    });
 });
-
-
-
-// Модальное окно
-// const headerButton     = document.querySelectorAll('[data-modal-button]'),
-//       modalButtonClose = document.querySelectorAll('[data-modal-close]'),
-//       allModal         = document.querySelectorAll('[data-modal]');
-
-// // Кнопки - открыть модалку
-// headerButton.forEach(function (i) {
-//    i.addEventListener('click', function () {
-//       const modalId = this.dataset.modalButton;
-//       const modal   = document.querySelector('#' + modalId);      
-
-//       if (!document.body.classList.contains('lock')) {
-//          document.body.classList.add('lock');
-//          $.scrollify.disable();
-//       };
-
-//       modal.classList.add('open');
-      
-//       //Находим внутри открываемой модалки блок modal и запрещаем ему передавать клики родителям
-//       modal.querySelector('.modal').addEventListener('click', function (e) {
-//          e.stopPropagation();         
-//       });
-//    });
-// });
-
-// // Кнопки - закрыть модалку
-// modalButtonClose.forEach(function (item) {
-//    item.addEventListener('click', function () {
-//       const modal = this.closest('[data-modal]');         
-
-//       if (!menu.classList.contains('menu__list--active')) {
-//          modal.classList.remove('open');
-//          document.body.classList.remove('lock');
-//          $.scrollify.enable();         
-//       } else {
-//          modal.classList.remove('open');
-//       };      
-//    });
-// });
-
-// // Закрытие модалки по фейду
-// allModal.forEach(function (item) {
-//    item.addEventListener('click', function () {      
-
-//       if (!menu.classList.contains('menu__list--active')) {
-//          this.classList.remove('open');
-//          document.body.classList.remove('lock');
-//          $.scrollify.enable();
-//       } else {
-//          this.classList.remove('open');
-//       };
-//    });
-// });
